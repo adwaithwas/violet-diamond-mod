@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     public static final Item VIOLET_DIAMOND = registerItem("violet_diamond", new Item(new Item.Settings()));
+    public static final Item RAW_VIOLET_DIAMOND = registerItem("raw_violet_diamond", new Item(new Item.Settings()));
 
     public static Item registerItem(String name, Item item){
     return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name), item);
@@ -20,6 +21,7 @@ public class ModItems {
 
     ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
         entries.add(VIOLET_DIAMOND);
+        entries.add(RAW_VIOLET_DIAMOND);
     });
     }
 }
