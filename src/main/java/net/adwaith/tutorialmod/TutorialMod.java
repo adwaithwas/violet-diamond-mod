@@ -1,5 +1,6 @@
 package net.adwaith.tutorialmod;
 
+import net.adwaith.tutorialmod.block.ModBlocks;
 import net.adwaith.tutorialmod.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -18,6 +19,7 @@ public class TutorialMod implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 
 	}
 }
