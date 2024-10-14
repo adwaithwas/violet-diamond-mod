@@ -14,14 +14,14 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
 
-    public static final Block VIOLET_DIAMOND_BLOCK = registerBlock("violet_diamond_block", new Block(AbstractBlock.Settings.create().strength(6f,10f)
+    public static final Block VIOLET_DIAMOND_BLOCK = registerBlock("violet_diamond_block", new Block(AbstractBlock.Settings.create().strength(5f,7f)
             .requiresTool().luminance((state) -> {
                 return 12;
             }).sounds(BlockSoundGroup.METAL)));
-//    public static final Block VIOLET_DIAMOND_ORE = registerBlock("violet_diamond_ore", new Block(AbstractBlock.Settings.create().strength(6f,10f)
-//            .requiresTool().luminance((state) -> {
-//                return 5;
-//            }).sounds(BlockSoundGroup.METAL)));
+    public static final Block VIOLET_DIAMOND_ORE = registerBlock("violet_diamond_ore", new Block(AbstractBlock.Settings.create().strength(5f,7f)
+            .requiresTool().luminance((state) -> {
+                return 5;
+            }).sounds(BlockSoundGroup.METAL)));
 
     public static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
@@ -38,6 +38,7 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.VIOLET_DIAMOND_BLOCK);
+            entries.add(ModBlocks.VIOLET_DIAMOND_ORE);
         });
     }
 }
